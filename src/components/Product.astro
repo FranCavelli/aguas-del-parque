@@ -1,0 +1,20 @@
+---
+interface Props {
+    product: Product;
+    index: number;
+}
+
+interface Product {
+    id: number;
+    name: string;
+    image: string;
+    price: number;
+    description: string;
+}
+
+const { product, index } = Astro.props;
+---
+
+<a href={`/product/${product.id}`} data-product-id={product.id} class="w-1/5 text-center p-4 rounded-lg flex flex-col h-48 justify-center">
+    <img src={product.image} alt={product.name} class="object-contain h-full">
+</a>

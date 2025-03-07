@@ -1,8 +1,49 @@
 ---
----
+import Card from "./Card.astro";
 
-<div id="container">
-	<div class="w-full flex justify-center pt-25">
-		<img src="src/assets/fondo.jpg" alt="asd" srcset="" class="w-5/6 object-cover h-[40rem] rounded-2xl">
-	</div>
-</div>
+---
+<section class="">
+  <div class="w-full relative flex flex-col" id="section">
+    <div class="flex flex-col justify-center items-center relative">
+      <button class="absolute z-10 pb-20">asd</button>
+      <button class="absolute z-10 bg-blue-400 text-white py-2 rounded-full px-4 shadow-md text-sm cursor-pointer transition-all duration-300 hover:bg-blue-300">Quiero pedir agua</button>
+      <img src="src/assets/media/fondo.jpg" alt="" class="relative z-0">
+    </div>
+  </div>
+  <div class="px-30 w-full">
+    <h2 class="text-center text-4xl font-semibold">¿En qué nos distingimos?</h2>
+    <p class="text-center mt-2 text-xl text-gray-600">Nuestra diferencia, tu beneficio</p>
+    <div class="w-full flex mt-10 pb-10 gap-4">
+      <Card icon="src/assets/agua.png" title="Agua" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+      <Card icon="src/assets/agua.png" title="Agua" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+      <Card icon="src/assets/agua.png" title="Agua" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+      <Card icon="src/assets/agua.png" title="Agua" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+    </div>
+  </div>
+  <div class="w-full h-96 bg-blue-100 relative">
+    <img src="src/assets/media/divisor1.png" alt="" class=" w-full absolute -top-6">
+  </div>
+</section>
+
+<style>
+  #section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("src/assets/media/divisor3.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 -20px 10px #0000004b);
+    z-index: 10; 
+    pointer-events: none;
+  }
+
+  img {
+    position: relative;
+    z-index: 5;
+  }
+</style>
